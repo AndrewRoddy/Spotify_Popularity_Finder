@@ -4,8 +4,11 @@ from tabulate import tabulate
 import datetime
 import re
 import copy
+import tkinter as tk
 
-#
+def run_ui():
+    root = tk.Tk()
+    
 
 def ascii_art():
     """
@@ -534,16 +537,13 @@ def album_select(album_data):
 
 
 def main():
-    # Prints the ascii art
-    print(ascii_art())
-
     # Uses my spotipy codes to run the program
     setup_spotipy(
         "0a240b9f9c0a42d48396b35cd459a925", "c9377c875e3146078d77ee366a76c02a"
     )
 
-    # Runs the artist select function
-    artist_select()
+    # Starts Tkinter
+    run_ui()
 
 
 if __name__ == "__main__":
