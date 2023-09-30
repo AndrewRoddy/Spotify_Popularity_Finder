@@ -542,22 +542,22 @@ def main():
     # Starts Tkinter
     root = tk.Tk()
 
-    # Sets the bounds of the window
-    root.geometry("750x250")
 
     # Creates the text on screen
     myLabel = tk.Label(
         root,
         text=songs_table(album_songs("1NAmidJlEaVgA3MpcPFYGq")),
-        font=("Helvetica 15 underline"),
-    )
-    myLabel.pack(pady=20, side=TOP, anchor="w")
+        font=("Helvetica 15"),
+        anchor='w',
+    ).pack(fill='both')
 
 
+    """
     # Creates an input field in tkinter
     entry = tk.Entry(root, width=40)
     entry.focus_set()
     entry.pack()
+    """
 
     # Runs the window
     root.mainloop()
